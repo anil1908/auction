@@ -27,9 +27,10 @@ export class AuctionService {
         Password: 'gitgitgit'
       });
 
-      this.http.post('http://api-dev.loisirsencheres.com/oauth2/token',data)
+      this.http.get('user.json')
         .map(res => res.json())
         .subscribe(data => {
+
           debugger;
           this.data = data;
           resolve(this.data);
