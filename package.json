@@ -1,5 +1,5 @@
 {
-  "name": "ionic-app-base",
+  "name": "ionic-hello-world",
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
   "private": true,
@@ -27,5 +27,15 @@
   "devDependencies": {
     "@ionic/app-scripts": "0.0.45",
     "typescript": "2.0.6"
-  }
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-whitelist",
+    "cordova-plugin-statusbar",
+    "cordova-plugin-console",
+    "cordova-plugin-device",
+    "ionic-plugin-keyboard",
+    "cordova-plugin-splashscreen"
+  ],
+  "cordovaPlatforms": [],
+  "description": "auc: An Ionic project"
 }
