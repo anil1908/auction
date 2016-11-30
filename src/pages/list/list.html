@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My First List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div padding>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="tab1">
+        Auction List
+      </ion-segment-button>
+      <ion-segment-button value="tab2">
+        Category
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="pet">
+
+      <ion-list *ngSwitchCase="'tab1'">
+          <div *ngFor="let auc of auction" >
+            <ion-item>
+              <img src="{{auc.images[0]}}">
+            </ion-item>
+            <ion-item>
+              {{auc.product_name}}
+            </ion-item>
+            <ion-item>
+              <div item-left>
+                {{auc.auction_end}}
+              </div>
+              <div item-right>
+                {{auc.product_publicPrice}}
+              </div>
+            </ion-item>
+          </div>
+      </ion-list>
+
+    <ion-list *ngSwitchCase="'tab2'">
+      <ion-item>
+        <ion-thumbnail item-left>
+          Tab 1 Content
+        </ion-thumbnail>
+      </ion-item>
+    </ion-list>
+  </div>
+
+</ion-content>
